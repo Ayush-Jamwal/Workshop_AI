@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+  --color-apple-text: #1D1D1F;
+  --color-apple-sub: #86868B;
+  --color-apple-bg: #FFFFFF;
+  --radius-apple: 54px;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased text-apple-text bg-apple-bg;
+  }
+}
+
+.apple-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+.squircle-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--radius-apple);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
